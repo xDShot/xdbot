@@ -1,0 +1,16 @@
+{
+	"title"		: "xDBot - An Artifical Intelligence for players",
+	"type"		: "npc",
+	"tags"		: [ "roleplay" ],
+	"ignore"	: [
+		"*.psd",
+		"*.vcproj",
+		"*.svn*",
+		".git/*",
+		".vscode/*",
+		"tools/*",
+		".gitignore",
+		".gitattributes",
+		"*.md"
+	]
+}
