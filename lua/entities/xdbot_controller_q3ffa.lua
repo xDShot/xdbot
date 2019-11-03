@@ -3,34 +3,24 @@ ENT.Type = "nextbot"
 
 ENT.Spawnable = false
 
+DEFINE_BASECLASS( "xdbot_controller_base" )
+
 
 
 function ENT:GamemodeThink()
-
-	self:CheckForHealth()
-	self:FindGoodies()
-
-	self:EnemyHandle()
-	
+	BaseClass.GamemodeThink( self )
 end
 
 
 
 function ENT:DeathThink()
-	if self.HostBot:Alive() then
-		print( self, "ENT:DeathThink()", "HostBot is actually alive. Why the hell you call me???" )
-		return
-	end
-	self.Goals = {} -- forget everything. Make all over again
-	self.GoalMove = nil
-	self.TargetMove = nil
-	self:TryToRespawn()
+	BaseClass.DeathThink( self )
 end
 
 
 
 function ENT:CanPickupEntity( ent )
-	return ent.Available
+	return ent.Available or BaseClass.CanPickupEntity( self, ent )
 end
 
 

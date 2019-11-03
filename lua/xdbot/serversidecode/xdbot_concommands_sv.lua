@@ -91,5 +91,5 @@ concommand.Add( "xdbot_add", xdbot_add, nil, "Spawn a bot. Optionally specify pe
 
 
 CreateConVar( "xdbot_drawpath", "0", FCVAR_CHEAT, "Show bot paths for debugging" )
-
+CreateConVar( "xdbot_huntplayers", "0", FCVAR_ARCHIVE, "Attack players if gamemode specific controller doesn\'t have specific player relations handler" )
 
