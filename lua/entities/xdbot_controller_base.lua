@@ -983,7 +983,7 @@ function ENT:InterpolateViewAngle()
 	self.CmdTargetAngle = angle
 
 	-- now gradually interpolate current eye angle to target angle
-	local amount = math.random() * 4 -- To simulate jittery
+	local amount = math.random() * 16 -- To simulate jittery
 	local delta = angleturn( self.CmdCurAngle, self.CmdTargetAngle, amount )
 
 	self.CmdCurAngle = delta
